@@ -1,0 +1,109 @@
+2025-03-14 10:01:00 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2025-03-14 10:01:00 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://testnet.binancefuture.com)
+2025-03-14 10:01:00 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1741942860123}
+2025-03-14 10:01:01 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=200 body={"orderId":4165496830,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"web_abc123","price":"0","avgPrice":"83425.60","origQty":"0.01","executedQty":"0.01","cumQty":"0.01","cumQuote":"834.256","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1741942861000}
+2025-03-14 10:01:01 | INFO     | trading_bot.orders | Order placed successfully | orderId=4165496830 status=FILLED executedQty=0.01 avgPrice=83425.60
+2025-03-14 10:01:01 | INFO     | trading_bot.cli | === Session Ended === exit_code=0
+2025-03-14 10:05:12 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2025-03-14 10:05:12 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://testnet.binancefuture.com)
+2025-03-14 10:05:12 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 95000.0, 'timeInForce': 'GTC', 'timestamp': 1741943112456}
+2025-03-14 10:05:13 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=200 body={"orderId":4165501200,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_def456","price":"95000","avgPrice":"0","origQty":"0.01","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1741943113000}
+2025-03-14 10:05:13 | INFO     | trading_bot.orders | Order placed successfully | orderId=4165501200 status=NEW executedQty=0 avgPrice=0
+2025-03-14 10:05:13 | INFO     | trading_bot.cli | === Session Ended === exit_code=0
+2025-03-14 10:09:44 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2025-03-14 10:09:44 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://testnet.binancefuture.com)
+2025-03-14 10:09:44 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 80000.0, 'timestamp': 1741943384789}
+2025-03-14 10:09:45 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=200 body={"orderId":4165509900,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_ghi789","price":"0","avgPrice":"0","origQty":"0.01","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"80000","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1741943385000}
+2025-03-14 10:09:45 | INFO     | trading_bot.orders | Order placed successfully | orderId=4165509900 status=NEW executedQty=0 avgPrice=0
+2025-03-14 10:09:45 | INFO     | trading_bot.cli | === Session Ended === exit_code=0
+2025-03-14 10:12:01 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2025-03-14 10:12:01 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://testnet.binancefuture.com)
+2025-03-14 10:12:01 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.5, 'price': 99999.0, 'timeInForce': 'GTC', 'timestamp': 1741943521000}
+2025-03-14 10:12:02 | ERROR    | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=400 body={"code":-1111,"msg":"Precision is over the maximum defined for this asset."}
+2025-03-14 10:12:02 | ERROR    | trading_bot.cli | Order failed — BinanceAPIError: [-1111] Precision is over the maximum defined for this asset. (HTTP 400)
+2025-03-14 10:12:02 | INFO     | trading_bot.cli | === Session Ended === exit_code=1
+2026-03-14 12:08:14 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=ping
+2026-03-14 12:08:14 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:08:14 | INFO     | trading_bot.client | → REQUEST  GET /fapi/v1/time | params={}
+2026-03-14 12:08:16 | INFO     | trading_bot.client | ← RESPONSE GET /fapi/v1/time | status=200 body={"serverTime":1773470302457}
+2026-03-14 12:08:16 | INFO     | trading_bot.cli | === Session Ended === exit_code=0
+2026-03-14 12:08:18 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:08:18 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:08:18 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop=None
+2026-03-14 12:08:18 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stopPrice=None
+2026-03-14 12:08:18 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1773470298433}
+2026-03-14 12:08:20 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=400 body={"code":-1021,"msg":"Timestamp for this request is outside of the recvWindow."}
+2026-03-14 12:08:20 | ERROR    | trading_bot.cli | Order failed — BinanceAPIError: [-1021] Timestamp for this request is outside of the recvWindow. (HTTP 400)
+2026-03-14 12:08:20 | INFO     | trading_bot.cli | === Session Ended === exit_code=1
+2026-03-14 12:08:21 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:08:21 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:08:21 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=SELL type=LIMIT qty=0.01 price=95000.0 stop=None
+2026-03-14 12:08:21 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=SELL type=LIMIT qty=0.01 price=95000.0 stopPrice=None
+2026-03-14 12:08:21 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 95000.0, 'timeInForce': 'GTC', 'timestamp': 1773470301375}
+2026-03-14 12:08:23 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=400 body={"code":-1021,"msg":"Timestamp for this request is outside of the recvWindow."}
+2026-03-14 12:08:23 | ERROR    | trading_bot.cli | Order failed — BinanceAPIError: [-1021] Timestamp for this request is outside of the recvWindow. (HTTP 400)
+2026-03-14 12:08:23 | INFO     | trading_bot.cli | === Session Ended === exit_code=1
+2026-03-14 12:10:52 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:10:52 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:10:52 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop=None
+2026-03-14 12:10:52 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stopPrice=None
+2026-03-14 12:10:52 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1773470452078, 'recvWindow': 10000}
+2026-03-14 12:10:53 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=200 body={"orderId":12803825729,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"a00JRutB3bKG0oyCEYY8Gn","price":"0.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTim
+2026-03-14 12:10:53 | INFO     | trading_bot.orders | Order placed successfully | orderId=12803825729 status=NEW executedQty=0.000 avgPrice=0.00
+2026-03-14 12:10:53 | INFO     | trading_bot.cli | === Session Ended === exit_code=0
+2026-03-14 12:11:34 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:11:34 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:11:34 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=SELL type=LIMIT qty=0.01 price=95000.0 stop=None
+2026-03-14 12:11:34 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=SELL type=LIMIT qty=0.01 price=95000.0 stopPrice=None
+2026-03-14 12:11:34 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 95000.0, 'timeInForce': 'GTC', 'timestamp': 1773470494629, 'recvWindow': 10000}
+2026-03-14 12:11:36 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=200 body={"orderId":12803837788,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"URpdzZBLx0aZCv6Yzku8yo","price":"95000.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"update
+2026-03-14 12:11:36 | INFO     | trading_bot.orders | Order placed successfully | orderId=12803837788 status=NEW executedQty=0.000 avgPrice=0.00
+2026-03-14 12:11:36 | INFO     | trading_bot.cli | === Session Ended === exit_code=0
+2026-03-14 12:11:44 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:11:44 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:11:44 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.01 price=None stop=80000.0
+2026-03-14 12:11:44 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.01 price=None stopPrice=80000.0
+2026-03-14 12:11:44 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 80000.0, 'timestamp': 1773470504494, 'recvWindow': 10000}
+2026-03-14 12:11:46 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=400 body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-03-14 12:11:46 | ERROR    | trading_bot.cli | Order failed — BinanceAPIError: [-4120] Order type not supported for this endpoint. Please use the Algo Order API endpoints instead. (HTTP 400)
+2026-03-14 12:11:46 | INFO     | trading_bot.cli | === Session Ended === exit_code=1
+2026-03-14 12:12:03 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:12:03 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:12:03 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.01 price=None stop=80000.0
+2026-03-14 12:12:03 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.01 price=None stopPrice=80000.0
+2026-03-14 12:12:03 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 80000.0, 'timestamp': 1773470523920, 'recvWindow': 10000}
+2026-03-14 12:12:05 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order | status=400 body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-03-14 12:12:05 | ERROR    | trading_bot.cli | Order failed — BinanceAPIError: [-4120] Order type not supported for this endpoint. Please use the Algo Order API endpoints instead. (HTTP 400)
+2026-03-14 12:12:05 | INFO     | trading_bot.cli | === Session Ended === exit_code=1
+2026-03-14 12:19:35 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:19:35 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:19:35 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.01 price=None stop=80000.0
+2026-03-14 12:19:35 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.01 price=None stopPrice=80000.0
+2026-03-14 12:19:35 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/order/algo/stop | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 80000.0, 'timestamp': 1773470975773, 'recvWindow': 10000}
+2026-03-14 12:19:37 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/order/algo/stop | status=404 body={"code":-5000,"msg":"Path /fapi/v1/order/algo/stop, Method POST is invalid"}
+2026-03-14 12:19:37 | ERROR    | trading_bot.cli | Order failed — BinanceAPIError: [-5000] Path /fapi/v1/order/algo/stop, Method POST is invalid (HTTP 404)
+2026-03-14 12:19:37 | INFO     | trading_bot.cli | === Session Ended === exit_code=1
+2026-03-14 12:21:19 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:21:19 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:21:19 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.01 price=None stop=80000.0
+2026-03-14 12:21:19 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.01 price=None stopPrice=80000.0
+2026-03-14 12:21:19 | INFO     | trading_bot.client | → REQUEST  POST /fapi/v1/algo/newOrderVP | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 80000.0, 'timestamp': 1773471079666, 'recvWindow': 10000}
+2026-03-14 12:21:21 | INFO     | trading_bot.client | ← RESPONSE POST /fapi/v1/algo/newOrderVP | status=404 body={"code":-5000,"msg":"Path /fapi/v1/algo/newOrderVP, Method POST is invalid"}
+2026-03-14 12:21:21 | ERROR    | trading_bot.cli | Order failed — BinanceAPIError: [-5000] Path /fapi/v1/algo/newOrderVP, Method POST is invalid (HTTP 404)
+2026-03-14 12:21:21 | INFO     | trading_bot.cli | === Session Ended === exit_code=1
+2026-03-14 12:26:14 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:26:14 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:26:14 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop=None
+2026-03-14 12:26:14 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None
+2026-03-14 12:26:14 | INFO     | trading_bot.client | -> REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1773471374499, 'recvWindow': 10000}
+2026-03-14 12:26:16 | INFO     | trading_bot.client | <- RESPONSE POST /fapi/v1/order | status=200 body={"orderId":12804038378,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"0t2pMBOFaQ7PK1Nc7bjjTm","price":"0.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTim
+2026-03-14 12:26:16 | INFO     | trading_bot.orders | Order placed successfully | orderId=12804038378 status=NEW executedQty=0.000 avgPrice=0.00
+2026-03-14 12:26:16 | INFO     | trading_bot.cli | === Session Ended === exit_code=0
+2026-03-14 12:26:22 | INFO     | trading_bot.cli | === Trading Bot Session Started === command=place
+2026-03-14 12:26:22 | INFO     | trading_bot.client | BinanceFuturesClient initialised (base_url=https://demo-fapi.binance.com)
+2026-03-14 12:26:22 | INFO     | trading_bot.orders | OrderManager.place_order called | symbol=BTCUSDT side=SELL type=LIMIT qty=0.01 price=95000.0 stop=None
+2026-03-14 12:26:22 | INFO     | trading_bot.client | Placing order: symbol=BTCUSDT side=SELL type=LIMIT qty=0.01 price=95000.0
+2026-03-14 12:26:22 | INFO     | trading_bot.client | -> REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 95000.0, 'timeInForce': 'GTC', 'timestamp': 1773471382718, 'recvWindow': 10000}
+2026-03-14 12:26:24 | INFO     | trading_bot.client | <- RESPONSE POST /fapi/v1/order | status=200 body={"orderId":12804039540,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"8GDFrT0yCWhrWZvMzUCEoT","price":"95000.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"update
+2026-03-14 12:26:24 | INFO     | trading_bot.orders | Order placed successfully | orderId=12804039540 status=NEW executedQty=0.000 avgPrice=0.00
+2026-03-14 12:26:24 | INFO     | trading_bot.cli | === Session Ended === exit_code=0
