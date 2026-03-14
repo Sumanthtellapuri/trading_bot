@@ -17,6 +17,10 @@ from urllib3.util.retry import Retry
 
 from .logging_config import get_logger
 
+
+from dotenv import load_dotenv
+load_dotenv()
+
 logger = get_logger("client")
 
 TESTNET_BASE_URL = "https://demo-fapi.binance.com"
